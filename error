@@ -1,3 +1,122 @@
+copilotedai@raspberrypi:~/Desktop/mshop-fridge-fix-video-length $ python3 run.py
+🚀 Starting MShop Fridge Camera Application...
+📦 Checking dependencies...
+Checking dependencies...
+✅ All dependencies are already installed.
+🎥 Starting camera application...
+✅ Using rpi-lgpio library (Pi 5 compatible RPi.GPIO replacement)
+🚀 Creating GPIO Controller V2...
+🔍 GPIO Controller V2 System Information:
+   Platform: Linux-6.12.47+rpt-rpi-2712-aarch64-with-glibc2.41
+   Python: 3.10.15
+   Architecture: aarch64
+   GPIO Library: rpi-lgpio
+   Use GPIO: True
+   Test Mode: False
+   Transaction Pin: GPIO 26
+   Alarm Pin: GPIO 19
+   Light1 Pin: GPIO 12
+🔧 Initializing GPIO Controller V2...
+   Setting up GPIO using rpi-lgpio...
+   ✅ GPIO.setmode(GPIO.BCM) successful
+✅ GPIO Controller V2 initialized successfully
+🧪 Running startup test...
+🧪 TESTING PIN 26 COMPREHENSIVE TEST
+==================================================
+Step 1: Setting up PIN 26 as output
+🔧 Setting up GPIO pin 26 as output
+   ✅ Pin 26 configured as OUTPUT (initialized LOW)
+✅ Pin 26 successfully configured as output
+Step 2: Setting PIN 26 to HIGH
+Step 3: Reading PIN 26 after HIGH
+   Pin state after HIGH: True (HIGH)
+Step 4: Setting PIN 26 to LOW
+Step 5: Reading PIN 26 after LOW
+   Pin state after LOW: False (LOW)
+✅ PIN 26 TEST PASSED
+==================================================
+✅ GPIO Controller V2 startup test PASSED
+🔧 Initializing alarm pin (GPIO 19)...
+🔧 Setting up GPIO pin 19 as output
+   ✅ Pin 19 configured as OUTPUT (initialized LOW)
+✅ Pin 19 successfully configured as output
+✅ Alarm pin initialized successfully (OFF)
+🔧 Initializing Light 1 pin (GPIO 12)...
+🔧 Setting up GPIO pin 12 as output
+   ✅ Pin 12 configured as OUTPUT (initialized LOW)
+✅ Pin 12 successfully configured as output
+✅ Light 1 pin initialized successfully (OFF)
+2025-12-17 18:57:05,143 - camera_app - INFO - Starting Camera Start Application
+🔄 INIT: Transaction Processor Initialized
+⌨️  Press 'W' key to toggle alarm
+🔧 Setting up GPIO pin 13 as input
+   ✅ Pin 13 configured as INPUT
+✅ Pin 13 successfully configured as input
+Found video devices: ['/dev/video0', '/dev/video1', '/dev/video2', '/dev/video3']
+Camera 0 opened with FPS set to 30.0, actual FPS: 10.0
+Found camera at index 0 (Resolution: 1280x720, FPS: 10.0)
+[ WARN:0@2.275] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
+[ WARN:0@2.275] global cap.cpp:478 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
+[ WARN:0@2.276] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
+[ERROR:0@2.382] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+[ WARN:0@2.382] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
+[ERROR:0@2.384] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+Could not open camera at index 1 (/dev/video1)
+Camera 2 opened with FPS set to 30.0, actual FPS: 10.0
+Found camera at index 2 (Resolution: 1280x720, FPS: 10.0)
+[ WARN:0@3.902] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
+[ WARN:0@3.902] global cap.cpp:478 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
+[ WARN:0@3.902] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
+[ERROR:0@3.903] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+[ WARN:0@3.904] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
+[ERROR:0@3.905] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+Could not open camera at index 3 (/dev/video3)
+No device at /dev/video4
+Total valid cameras found: 2
+🔔 Startup beep - system initialized successfully
+Camera 2 (preview 0): Hardware FPS set to 30.0 (target recording: 10 FPS), actual: 10.0
+Starting camera loop for preview 0
+Camera 2 started successfully on attempt 1
+Camera 0 (preview 1): Hardware FPS set to 30.0 (target recording: 10 FPS), actual: 10.0
+Starting camera loop for preview 1
+Camera 0 started successfully on attempt 1
+🔥 Firebase Event: PUT
+Camera 1 failed to read frame
+🚨 Preview 1: cap.read() returned False
+Camera loop ended for preview 1
+Found video devices: ['/dev/video0', '/dev/video1', '/dev/video2', '/dev/video3']
+Camera 0 opened with FPS set to 30.0, actual FPS: 10.0
+Found camera at index 0 (Resolution: 1280x720, FPS: 10.0)
+[ WARN:0@152.919] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
+[ WARN:0@152.920] global cap.cpp:478 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
+[ WARN:0@152.920] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
+[ERROR:0@152.921] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+[ WARN:0@152.921] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
+[ERROR:0@152.923] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+Could not open camera at index 1 (/dev/video1)
+[ WARN:0@152.926] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video2): can't open camera by index
+[ WARN:0@152.926] global cap.cpp:478 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
+[ WARN:0@152.926] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video2): can't open camera by index
+[ERROR:0@152.928] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+[ WARN:0@152.928] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video2): can't open camera by index
+[ERROR:0@152.929] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+Could not open camera at index 2 (/dev/video2)
+[ WARN:0@152.932] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
+[ WARN:0@152.933] global cap.cpp:478 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
+[ WARN:0@152.933] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
+[ERROR:0@152.934] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+[ WARN:0@152.934] global cap_v4l.cpp:914 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
+[ERROR:0@152.936] global obsensor_uvc_stream_channel.cpp:163 getStreamChannelGroup Camera index out of range
+Could not open camera at index 3 (/dev/video3)
+No device at /dev/video4
+Total valid cameras found: 1
+Camera 0 (preview 1): Hardware FPS set to 30.0 (target recording: 10 FPS), actual: 10.0
+Starting camera loop for preview 1
+Camera 0 started successfully on attempt 1
+🔥 Firebase Event: PUT
+📱 Processed Event: MATCH | picking_status: started | STAGE: idle
+🚀 Starting transaction with ID: [-OgfxzEIer_HbmKB5O0R] from event: put
+🔄 STAGE 2: TRANSACTION_STARTED - New transaction initiated - [-OgfxzEIer_HbmKB5O0R]
 [h264_v4l2m2m @ 0x555639959dc0] Could not find a valid device
 [h264_v4l2m2m @ 0x555639959dc0] can't configure encoder
 [ERROR:0@206.421] global cap_ffmpeg_impl.hpp:3268 open Could not open codec h264_v4l2m2m, error: Unspecified error (-22)
@@ -13,4 +132,8 @@ No cameras available for recording
 🔄 STAGE 3: DOOR_UNLOCK - Energizing door lock - [-OgfxzEIer_HbmKB5O0R]
 🔥 Firebase Event: PATCH
 🔥 Firebase Event: PATCH
+🔥 Firebase Event: PATCH
+🔥 Firebase Event: PATCH
+📱 Processed Event: PATCH | picking_status: cancelled | STAGE: door_unlock
+
 
