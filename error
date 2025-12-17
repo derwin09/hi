@@ -1,0 +1,16 @@
+[h264_v4l2m2m @ 0x555639959dc0] Could not find a valid device
+[h264_v4l2m2m @ 0x555639959dc0] can't configure encoder
+[ERROR:0@206.421] global cap_ffmpeg_impl.hpp:3268 open Could not open codec h264_v4l2m2m, error: Unspecified error (-22)
+[ERROR:0@206.421] global cap_ffmpeg_impl.hpp:3285 open VIDEOIO/FFMPEG: Failed to initialize VideoWriter
+Failed to create video writer for camera 0 (path=recording/-OgfxzEIer_HbmKB5O0R/camera_0_20251217_190030.mp4, fourcc=avc1, fps=7, size=(1280,720))
+[h264_v4l2m2m @ 0x555639962060] Could not find a valid device
+[h264_v4l2m2m @ 0x555639962060] can't configure encoder
+[ERROR:0@206.439] global cap_ffmpeg_impl.hpp:3268 open Could not open codec h264_v4l2m2m, error: Unspecified error (-22)
+[ERROR:0@206.439] global cap_ffmpeg_impl.hpp:3285 open VIDEOIO/FFMPEG: Failed to initialize VideoWriter
+Failed to create video writer for camera 1 (path=recording/-OgfxzEIer_HbmKB5O0R/camera_1_20251217_190030.mp4, fourcc=avc1, fps=7, size=(1280,720))
+No cameras available for recording
+❌ Failed to start recording
+🔄 STAGE 3: DOOR_UNLOCK - Energizing door lock - [-OgfxzEIer_HbmKB5O0R]
+🔥 Firebase Event: PATCH
+🔥 Firebase Event: PATCH
+
