@@ -1,4 +1,4 @@
-copilotedai@raspberrypi:~/Desktop/mshop-fridge-10-fps $ python3 run.py
+copilotedai@raspberrypi:~/Downloads/mshop-fridge-feat-secondary-door-lock $ python3 run.py
 🚀 Starting MShop Fridge Camera Application...
 📦 Checking dependencies...
 Checking dependencies...
@@ -13,7 +13,7 @@ Checking dependencies...
    GPIO Library: rpi-lgpio
    Use GPIO: True
    Test Mode: False
-   Transaction Pin: GPIO 26
+   Door Lock Pins: GPIO 26 + GPIO 17
    Alarm Pin: GPIO 19
    Light1 Pin: GPIO 12
 🔧 Initializing GPIO Controller V2...
@@ -46,175 +46,9 @@ Step 5: Reading PIN 26 after LOW
    ✅ Pin 12 configured as OUTPUT (initialized LOW)
 ✅ Pin 12 successfully configured as output
 ✅ Light 1 pin initialized successfully (OFF)
-2025-12-19 15:36:02,348 - camera_app - INFO - Starting Camera Start Application
+2026-01-02 19:13:12,496 - camera_app - INFO - Starting Camera Start Application
 🔄 INIT: Transaction Processor Initialized
 ⌨️  Press 'W' key to toggle alarm
-🔧 Setting up GPIO pin 13 as input
-   ✅ Pin 13 configured as INPUT
-✅ Pin 13 successfully configured as input
-Found video devices: ['/dev/video0', '/dev/video2', '/dev/video3', '/dev/video4']
-Camera 0 opened with FPS set to 30.0, actual FPS: 10.0
-Found camera at index 0 (Resolution: 1280x720, FPS: 10.0)
-No device at /dev/video1
-Camera 2 opened with FPS set to 30.0, actual FPS: 10.0
-Found camera at index 2 (Resolution: 1280x720, FPS: 10.0)
-[ WARN:0@3.359] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
-[ WARN:0@3.359] global cap.cpp:342 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
-[ WARN:0@3.493] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src0 reported: Device '/dev/video3' is not a capture device.
-[ WARN:0@3.493] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@3.493] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@3.493] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
-[ERROR:0@3.601] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-[ WARN:0@3.610] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src1 reported: Device '/dev/video3' is not a capture device.
-[ WARN:0@3.610] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@3.610] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@3.610] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video3): can't open camera by index
-[ERROR:0@3.714] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-Could not open camera at index 3 (/dev/video3)
-[ WARN:0@3.717] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video4): can't open camera by index
-[ WARN:0@3.717] global cap.cpp:342 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
-[ WARN:0@3.723] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src2 reported: Device '/dev/video4' is not a capture device.
-[ WARN:0@3.723] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@3.723] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@3.723] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video4): can't open camera by index
-[ERROR:0@3.813] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-[ WARN:0@3.819] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src3 reported: Device '/dev/video4' is not a capture device.
-[ WARN:0@3.819] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@3.819] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@3.819] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video4): can't open camera by index
-[ERROR:0@3.909] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-Could not open camera at index 4 (/dev/video4)
-Total valid cameras found: 2
-🔔 Startup beep - system initialized successfully
-Camera 2 (preview 0): Hardware FPS set to 72.0 (target recording: 60 FPS), actual: 10.0
-Starting camera loop for preview 0
-Camera 2 started successfully on attempt 1
-[ WARN:0@6.417] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ WARN:0@6.417] global cap.cpp:342 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
-[ WARN:0@6.423] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src4 reported: Cannot identify device '/dev/video1'.
-[ WARN:0@6.423] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@6.423] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@6.423] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ERROR:0@6.637] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-[ WARN:0@6.645] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src5 reported: Cannot identify device '/dev/video1'.
-[ WARN:0@6.645] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@6.645] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@6.645] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ERROR:0@6.757] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-Camera 1 attempt 1 failed: Could not open camera 1
-Retrying camera 1 in 3 seconds...
-[ WARN:0@9.757] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ WARN:0@9.757] global cap.cpp:342 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
-[ WARN:0@9.763] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src6 reported: Cannot identify device '/dev/video1'.
-[ WARN:0@9.763] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@9.763] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@9.763] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ERROR:0@9.961] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-[ WARN:0@9.968] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src7 reported: Cannot identify device '/dev/video1'.
-[ WARN:0@9.968] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@9.968] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@9.968] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ERROR:0@10.061] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-Camera 1 attempt 2 failed: Could not open camera 1
-Retrying camera 1 in 10 seconds...
-[ WARN:0@20.061] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ WARN:0@20.061] global cap.cpp:342 open VIDEOIO(V4L2): backend is generally available but can't be used to capture by index
-[ WARN:0@20.069] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src8 reported: Cannot identify device '/dev/video1'.
-[ WARN:0@20.069] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@20.069] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@20.069] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ERROR:0@20.289] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-[ WARN:0@20.298] global cap_gstreamer.cpp:2839 handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src9 reported: Cannot identify device '/dev/video1'.
-[ WARN:0@20.299] global cap_gstreamer.cpp:1698 open OpenCV | GStreamer warning: unable to start pipeline
-[ WARN:0@20.299] global cap_gstreamer.cpp:1173 isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
-[ WARN:0@20.299] global cap_v4l.cpp:999 open VIDEOIO(V4L2:/dev/video1): can't open camera by index
-[ERROR:0@20.397] global obsensor_uvc_stream_channel.cpp:158 getStreamChannelGroup Camera index out of range
-Camera 1 attempt 3 failed: Could not open camera 1
-Could not auto-start camera 1: Failed to start camera 1 after 3 attempts: Could not open camera 1
-Camera 0 (preview 1): Hardware FPS set to 72.0 (target recording: 60 FPS), actual: 10.0
-Starting camera loop for preview 1
-Camera 0 started successfully on attempt 1
-Camera 0 failed to read frame
-🚨 Preview 0: cap.read() returned False
-Camera loop ended for preview 0
-Camera 2 (preview 0): Hardware FPS set to 72.0 (target recording: 60 FPS), actual: 10.0
-Starting camera loop for preview 0
-Camera 2 started successfully on attempt 1
-🔥 Firebase Event: PUT
-📱 Processed Event: MATCH | picking_status: cancelled | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-🔥 Firebase Event: PUT
-📱 Processed Event: MATCH | picking_status: started | STAGE: idle
-🚀 Starting transaction with ID: [-OgpXat0eYt_0PD2Qbmf] from event: put
-🔄 STAGE 2: TRANSACTION_STARTED - New transaction initiated - [-OgpXat0eYt_0PD2Qbmf]
-🔄 STAGE 3: DOOR_UNLOCK - Energizing door lock - [-OgpXat0eYt_0PD2Qbmf]
-🎥 Recording active for preview 0 (hardware cam 2): throttling to 60 fps (measured: not-measured-yet fps)
-⚠️ Preview 0 FPS deviation 100.0% (actual 0.0 vs target 60)
-🎥 Recording active for preview 1 (hardware cam 0): throttling to 60 fps (measured: not-measured-yet fps)
-⚠️ Preview 1 FPS deviation 100.0% (actual 0.0 vs target 60)
-🔥 Firebase Event: PATCH
-🔥 Firebase Event: PATCH
-⚠️ Camera 0 recording FPS deviation 94.8% (actual 3.1 vs target 60)
-⚠️ Preview 0 FPS deviation 94.9% (actual 3.1 vs target 60)
-⚠️ Camera 1 recording FPS deviation 88.3% (actual 7.0 vs target 60)
-⚠️ Preview 1 FPS deviation 88.2% (actual 7.1 vs target 60)
-🔄 SENSOR: Door OPENED detected
-🔄 STAGE 4: DOOR_OPEN - Door opened, waiting 400ms then disengaging lock - [-OgpXat0eYt_0PD2Qbmf]
-🔄 FIREBASE: Updating record [-OgpXat0eYt_0PD2Qbmf] to picking_status='picking'
-🔄 FIREBASE: ✅ Successfully updated record [-OgpXat0eYt_0PD2Qbmf] to picking
-🔥 Firebase Event: PATCH
-🔄 LOCK: Door lock DISENGAGED after 400ms delay
-⚠️ Camera 0 recording FPS deviation 94.9% (actual 3.1 vs target 60)
-⚠️ Preview 0 FPS deviation 95.0% (actual 3.0 vs target 60)
-⚠️ Camera 1 recording FPS deviation 89.4% (actual 6.4 vs target 60)
-⚠️ Preview 1 FPS deviation 90.7% (actual 5.6 vs target 60)
-⚠️ Camera 1 recording FPS deviation 90.0% (actual 6.0 vs target 60)
-⚠️ Preview 1 FPS deviation 91.5% (actual 5.1 vs target 60)
-⚠️ Camera 0 recording FPS deviation 95.7% (actual 2.6 vs target 60)
-⚠️ Preview 0 FPS deviation 96.8% (actual 1.9 vs target 60)
-🔄 SENSOR: Door CLOSED detected
-🔄 STAGE 5: DOOR_CLOSED - Door closed, transaction phase complete - [-OgpXat0eYt_0PD2Qbmf]
-🔄 STAGE 6: TRANSACTION_COMPLETE - Transaction completed, updating Firebase - [-OgpXat0eYt_0PD2Qbmf]
-🔄 FIREBASE: Updating record [-OgpXat0eYt_0PD2Qbmf] to picking_status='completed'
-🔥 Firebase Event: PATCH
-📱 Processed Event: PATCH | picking_status: picking | STAGE: transmission_complete
-🔄 FIREBASE: ✅ Successfully updated record [-OgpXat0eYt_0PD2Qbmf] to completed
-🔄 STAGE 1: IDLE - Transaction completed, returning to idle state
-🔥 Firebase Event: PATCH
-📱 Processed Event: PATCH | picking_status: completed | STAGE: idle
-🔥 Firebase Event: PUT
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-🔥 Firebase Event: PUT
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-🔥 Firebase Event: PUT
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-🔥 Firebase Event: PATCH
-⚠️ video3_filename not set in Firebase
-❌ video3_filename: Filename does not match actual file
-🔥 Firebase Event: PUT
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-🔥 Firebase Event: PUT
-📱 Processed Event: MATCH | picking_status: completed | STAGE: idle
-🔥 Firebase Event: PATCH
-🔥 Firebase Event: PATCH
-
+   ⚠️ Pin 17 not configured, setting up as output
+   ⚠️ Pin 17 not configured, setting up as output
+🔧 Setting up GPIO pin 17 as outpu
